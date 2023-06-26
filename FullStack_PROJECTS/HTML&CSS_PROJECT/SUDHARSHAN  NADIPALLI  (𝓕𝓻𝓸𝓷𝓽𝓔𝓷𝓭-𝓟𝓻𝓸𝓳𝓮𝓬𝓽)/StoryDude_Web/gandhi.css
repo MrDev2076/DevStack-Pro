@@ -1,0 +1,247 @@
+body{
+    background-color: white;
+    background-image: linear-gradient(rgba(248, 192, 87, 0.5),rgba(26, 254, 64, 0.5)),url(Gandhi_img/gcbg.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 125% 99%;
+}
+.top{
+    background-image: linear-gradient(rgba(244, 166, 31, 0.914),rgba(234, 200, 106, 0.213)),url(/quote.webp);
+}
+.header{
+    background-color: rgb(223, 239, 186);
+    margin-bottom: 20px;
+    height: 55px;
+    width:280px;
+    color: black;
+    border-radius: 8%;
+    text-shadow: 5px 8px 6px rgb(241, 19, 19);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 0px;
+    background-image: linear-gradient(rgba(244, 166, 31, 0.914),rgba(234, 200, 106, 0.213)),url(/Gandhi_img/HeadTitle_gandhi.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 125% 99%;
+    box-shadow: 0 30px 40px 0 rgba(23, 23, 23, 0.408), 0 6px 20px 0 rgba(244, 241, 244, 0.928);
+}
+/*.title{
+    background-color: rgba(223, 239, 186, 0);
+    height: 55px;
+    width:280px;
+    color: black;
+    border-radius: 0%;
+    text-shadow: 2px 2px 5px rgb(241, 19, 19);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 0px;
+    margin-left: 300px;
+    background-image: linear-gradient(rgba(244, 166, 31, 0),rgba(234, 200, 106, 0)),url(/quote.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 125% 99%;
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}*/
+img{
+    margin-top: 2px;
+    margin-left: 08px;
+    border-radius: 30%;
+}
+img:hover{
+    margin-left: 14px;
+    display: flex;
+    justify-content:center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 60%;
+}
+/*.navigationBarrowtop{
+    height: 20px;
+    width: 1330px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    gap: 30px; 
+    padding-bottom: 10px;
+    background-color: solid rgb(232, 19, 19);
+    color: rgb(219, 38, 38);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+.navgationBarrowtop{
+    padding: 10px 10px 20px 10px;
+    margin-bottom: 10px;
+    background-color: rgb(27, 112, 149);
+    color: lavenderblush;
+    border:0px solid black;
+    width: 1330px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    background-image: linear-gradient(rgba(220, 243, 15, 0.5),rgba(62, 63, 62, 0.5));
+
+}
+.search{
+    float:right;
+    margin-right:100px;
+    margin-left: 0px;
+    height: 20px;
+    border: 0px;
+    border-radius: 18%;
+}
+
+.login{
+    float : right;
+    margin-right: 20px;;
+    background-color: rgb(221, 229, 239);
+    border-radius: 48%;
+    margin-bottom: px;
+    padding-top: 0px;
+    color: ivory;
+    height: 50px;
+    width: 80px;
+
+}
+a{
+    text-decoration: none;
+}
+
+hr{
+    height:5px;
+    width:1330px;
+    background-color: black;
+}
+
+.container{
+    padding-left: 5px;
+    border: 5px;
+    padding: 1px;
+    border-color: red;
+}
+
+.row{
+    display: flex;
+    gap: 20px;
+}
+
+
+row:after{
+    content:" ";
+    display: contents;
+    clear: both;
+}
+.column1{
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(247, 221, 212);
+    border:1px solid black;
+    width: 280px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    
+}
+.dp{
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.column2{
+    margin-top: 10px;
+    padding-left: 25px;
+    float:left;
+    border: 1px solid black;
+    width: 1100px;
+    height: 1550px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    background-size: 99% 99%;
+    background-image: linear-gradient(rgba(15, 193, 243, 0.5),rgba(239, 245, 245, 0.5)),url(Gandhi_img/gcbg.jpeg);
+}
+
+
+.columngrey{
+    float: right;
+    padding-left: 5px;
+    margin-right: 125px;
+    border: 5px;
+    padding: 1px;
+    background-color: rgb(173, 168, 168);
+    border-color: rgb(22, 22, 22);
+    width: 750px;
+    height: 380px;
+
+}
+.columnx{
+    display: flex;
+    gap: 0px;
+
+}
+columnx:after{
+    content:" ";
+    display: contents;
+    clear: both;
+}
+button{
+    height: 20px;
+    box-shadow: 0px 2px 8px 0px black;
+    border-radius: 18%;
+}
+.columnblack{
+    margin-top: 10px;
+    margin-left:  12px ;
+    background-color: black;
+    padding-top: 10px;
+    padding-left: 2px;
+    float:left;
+    border: 1px solid black;
+    width: 720px;
+    height: 340px;
+    
+}
+.code{
+    height: 330px;
+    width:700px;
+    border-radius: 12%;
+}
+
+h2{
+    background-image: linear-gradient(rgba(243, 15, 15, 0.5),rgba(11, 11, 11, 0.5));
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:10px;
+    color:gold;
+    width: 900px;
+}
+h1{
+    width: 90px;
+    height: 0px;
+    margin: 10px;
+    padding: 2px;
+}
+.line{
+    width: 50px;
+    height: 5px;
+    background: rgb(242, 238, 22);
+    position: relative;
+    animation: mymove 2s infinite;
+
+
+  }
+
+  
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 120px;}
+}

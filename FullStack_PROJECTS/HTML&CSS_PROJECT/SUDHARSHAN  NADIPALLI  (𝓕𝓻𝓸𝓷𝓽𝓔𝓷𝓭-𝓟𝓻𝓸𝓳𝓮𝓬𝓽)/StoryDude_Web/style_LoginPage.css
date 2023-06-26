@@ -1,0 +1,236 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(rgba(201, 242, 253, 0.5),rgba(244, 247, 247, 0.5)),url(Log-Signin_img/7-mistakes-to-avoid-when-creating-a-mobile-learning-storyboard-1024x574.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 125% 99%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+ */
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    border-radius: 5px;
+    background-color: #8f8383;
+    padding: 20px 0 30px 0;
+    height: 800px;
+    width: 600px;
+    border: 1px solid black;
+    
+  } 
+  h1{
+    margin-left: 0px;
+    position: relative;
+    text-shadow: 2px 2px 5px rgb(248, 5, 5);
+  }
+/*for animations*/
+.line{
+    width: 50px;
+    height: 5px;
+    background: rgb(234, 190, 190);
+    position: relative;
+    animation: mymove 2s infinite;
+
+
+  }
+
+  
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 280px;}
+}
+
+
+
+  h2{
+    margin-left: 130px;
+  }
+
+  
+  input,
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; 
+    background-color: rgb(207, 206, 206);
+    border: 1px solid black;
+  }
+  
+  input:hover,
+  .btn:hover {
+    opacity: 1;
+  }
+
+  button{
+    width: 40%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    margin-left: 120px;
+    text-decoration: none;
+    color: white; 
+    background-color: #4d0cf3;
+    border: 1px solid black;
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .button:hover {
+    opacity: 1;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  a:link {
+    color: rgb(248, 250, 248);
+  }
+
+  .fb {
+    background-color: #3B5998;
+    color: white;
+    text-align: center;
+    width: 400px;
+    border-radius: 8%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .twitter {
+    background-color: #55ACEE;
+    color: white;
+    text-align: center;
+    width: 400px;
+    border-radius: 8%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .google {
+    text-align: center;
+    background-color: ivory;
+    color: rgb(1, 19, 17);
+    width: 400px;
+    border-radius: 8%;
+    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+ 
+  input[type=submit] 
+  {
+    background-color: #4d0cf3;
+    color: white;
+    cursor: pointer;
+    width:150px;
+    margin-left: 120px;
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  input[type=submit]:hover {
+    background-color: #089cedf6;
+  }
+  
+
+  .col1 {
+    float: centre;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+    margin-left: 425px;
+    
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .user{
+    background-color: ivory;
+    padding-top: 02px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    border-radius: 0%;
+    margin-left: 480px;
+    margin-top: 15px;
+    width: 400px;
+    box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .gender{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: row;
+  }
+  h6{
+    margin-left: 130px;
+    padding-top: 0%;
+  }
+  .bottom-container {
+    text-align: center;
+    /*background-color: #cbd0f000;
+    border-radius: 0px 0px 4px 4px;
+    border: 5px solid rgb(232, 227, 227);*/
+    margin-top: 20px;
+    width: 600px;
+    height: 70px;
+    margin-left: 380px;
+  }
+
+  
+
+ /* @media screen and (max-width: 850px)
+   {
+    .col {
+      width: 100%;
+      margin-top: 0;
+      padding-bottom: 40px;
+      border: 1px solid black;
+      margin-bottom: 80px;
+    }
+    h1{
+      margin-left: 0px;
+      position: relative;
+    }
+    h1::after{
+      position:absolute;
+      content:'';
+      background-color: #1c43f2;
+      height: 4px;
+      width: 15px;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      animation-name: line;
+      animation-duration: 2s;
+      animation-iteration-count: 4;
+  }
+  @keyframes hi {
+      0%{
+          width: 20px;
+      }
+      100%{
+          width: 500px;
+      }
+      
+ 
+    }
+  }*/

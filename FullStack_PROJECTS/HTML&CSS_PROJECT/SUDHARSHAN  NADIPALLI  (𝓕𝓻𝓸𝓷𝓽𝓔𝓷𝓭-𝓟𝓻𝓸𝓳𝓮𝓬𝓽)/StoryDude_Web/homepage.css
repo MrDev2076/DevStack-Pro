@@ -1,0 +1,264 @@
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: sticky;
+		top: 0;
+		cursor: pointer;
+	}
+	a{
+		text-decoration: none;
+	}
+
+	.background {
+		background: rgb(239, 177, 6);
+		background-blend-mode: darken;
+		background-size: cover;
+	}
+
+	.nav-list {
+		width: 70%;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 180px;
+		height: 40px;
+		margin: 10px;
+		border-radius: 20px;
+		box-shadow: 1px 4px 8px 1px;
+	}
+
+	.logo img {
+		width: 50px;
+		border-radius: 60px;
+		margin-right: 10px;
+	}
+	.line{
+		width: 30px;
+		height: 5px;
+		background: rgb(242, 238, 22);
+		position: relative;
+		animation: mymove 2s infinite;
+	
+	
+	  }
+	
+	  
+	@keyframes mymove {
+	  from {left: 0px;}
+	  to {left: 70px;}
+	}
+
+	.nav-list li {
+		list-style: none;
+		padding: 26px 30px;
+	}
+
+	.nav-list li a {
+		font-family: cursive;
+		text-decoration: none;
+		color: white;
+	}
+
+	.nav-list li a:hover {
+		color: rgb(232, 118, 118);
+	}
+
+	.rightnav {
+		width: 30%;
+		text-align: right;
+	}
+
+	#search {
+		padding: 5px;
+		font-size: 17px;
+		border: 2px solid rgb(10, 10, 10);
+		border-radius: 9px;
+	}
+
+	.firstsection {
+		background-color: rgb(244, 238, 236);
+		height: 400px;
+		
+	}
+
+	.secondsection {
+		background-color: rgb(14, 78, 241);
+		height: 400px;
+	}
+	.thirdsection {
+		background-color: rgb(244, 56, 116);
+		height: 400px;
+	}
+
+	.box-main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: black;
+		max-width: 99%;
+		margin: auto;
+		height: 99%;
+		background-image: linear-gradient(rgba(215, 241, 250, 0.5),rgba(244, 247, 247, 0.5)),url(Home_img/book\ home.jpg);
+  
+	}
+	.box-main2 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: black;
+		max-width: 99%;
+		margin: auto;
+		height: 99%;
+		background-image: linear-gradient(rgba(215, 241, 250, 0.5),rgba(244, 247, 247, 0.5)),url(Home_img/radio\ background\ .jpg);
+  
+	}
+	.box-main3 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: black;
+		max-width: 99%;
+		margin: auto;
+		height: 99%;
+		background-image: linear-gradient(rgba(215, 241, 250, 0.5),rgba(244, 247, 247, 0.5)),url(Home_img/about3.jpg);
+  
+	}
+
+	.firsthalf {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+	}
+
+	.secondhalf {
+		width: 30%;
+	}
+
+	.secondhalf img {
+		width: 70%;
+		border: 4px solid white;
+		border-radius: 150px;
+		display: block;
+		margin: auto;
+	}
+
+	.thirdhalf {
+		width: 30%;
+	}
+
+	.thirdhalf img {
+		width: 70%;
+		border: 4px solid white;
+		border-radius: 150px;
+		display: block;
+		margin: auto;
+	}
+
+	.text-big {
+		color:rgb(1, 9, 15);
+		font-family: 'Piazzolla', serif;
+		font-weight: bold;
+		font-size: 35px;
+		display: flex;
+		text-align: center;
+		
+	}
+	.boxes{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content:space-between;
+		gap: 180px;
+	}
+	.image{
+		display: flex;
+		float: right;
+		height: 150px;
+		border: 2px solid white;
+	}
+
+	.text-small {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.733),rgba(35, 201, 238, 0.326));
+		border-radius: 2%;
+		padding-top: 20px; padding-bottom: 0px;
+		height: 120px;
+		width: 1200px;
+		color: ghostwhite;
+		font-size: 18px;
+		display: flex;
+		justify-content:space-evenly;
+	}
+
+	.btn {
+		padding: 8px 20px;
+		margin: 7px 0;
+		border: 2px solid white;
+		border-radius: 8px;
+		background: none;
+		color: white;
+		cursor: pointer;
+	}
+
+	.btn-sm {
+		padding: 6px 10px;
+		vertical-align: middle;
+	}
+
+	.section {
+		height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 90%;
+		margin: auto;
+	}
+
+	.sectionSubTag text-small{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.733),rgba(35, 201, 238, 0.326));
+		border-radius: 2%;
+	}
+	.section-Left {
+		flex-direction: row-reverse;
+	}
+
+	.paras {
+		padding: 0px 65px;
+		
+		
+	}
+
+	.thumbnail img {
+		width: 250px;
+		border: 2px solid black;
+		border-radius: 26px;
+		margin-top: 19px;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.text-footer {
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family:monospace;
+		display: flex;
+		justify-content: center;
+		color: rgb(252, 249, 249);
+	}
+
