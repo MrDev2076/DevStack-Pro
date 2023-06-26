@@ -1,0 +1,114 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-image: linear-gradient(rgba(251, 68, 220, 0.92),rgba(225, 4, 140, 0.986)),url(/HeadTheam.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 125% 99%;
+    color: rgb(255, 254, 251);
+    text-shadow: 2px 2px 5px rgb(241, 230, 19);
+    padding: 20px;
+    text-align: center;
+    border: 2px 2px 2px 20px gold;
+    border-radius: 2%;
+    box-shadow: 15px 10px 16px rgb(63, 74, 89);
+  }
+  .line{
+    width: 50px;
+    height: 5px;
+    background: rgb(255, 246, 142);
+    position: relative;
+    border-radius: 16%;
+    animation: mymove 2s infinite;
+
+  }
+
+  
+@keyframes mymove {
+  from {left: 120px;}
+  to {left: 780px;}
+}
+
+h1 {
+    margin: 0;
+  }
+  .vid{
+    background-image: linear-gradient(rgba(215, 241, 250, 0.5),rgba(244, 247, 247, 0.5)),url(/bd.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 125% 99%;
+    box-shadow: 15px 10px 16px rgb(63, 74, 89);
+    padding-top: 0%;
+  }
+  main {
+    
+    background-image: linear-gradient(rgba(215, 241, 250, 0.5),rgba(244, 247, 247, 0.5)),url(/Bday\ Theam.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:left;
+    background-size: 125% 99%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  video{
+    margin-left: 80px;
+    width : 1200px;
+    height : 600px;
+    padding-top: 20px;
+    border: 10px color(srgb-linear rgb(255, 247, 0) rgb(225, 240, 13) rgb(246, 255, 0));
+    box-shadow: 15px 08px 16px 2px rgb(76, 94, 120);
+  }
+
+  .card {
+    width: 300px;
+    
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 05px 08px 6px rgb(76, 94, 120);
+    background-color: rgb(161, 234, 251);
+  }
+  
+  .card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .card img:hover{
+    margin-left: 4px;
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 12%;
+    transform:translate(2px);
+}
+  
+  footer {
+    background-color: #373636;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  a{
+    color: skyblue;
+    text-decoration: none;
+  }
+  a:hover{
+    color: gold;
+  }
+  
