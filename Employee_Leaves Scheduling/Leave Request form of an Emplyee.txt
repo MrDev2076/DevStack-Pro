@@ -1,0 +1,109 @@
+
+	 LEAVE FORM APPLICATION 
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Sample_Senario of Leave_Application :
+ 
+	Assume an Employee send a Leave request to TeamLead and TeamLeader checks the no.of paid Leaves of the employee and if forward request to the manager. If Employee has sufficient leaves.
+Then Manager grant the Leave for certainity days.Else, Manager denies the Leave request of the employee.
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Write a java program as below constraints :
+
+	 i) Create a class Employee with constructor Employee return request_1 for Leave to Manager_Method.
+	 ii) Manager_Method  checks bal_Employee Leaves.
+		 1. If bal_Employee Leaves > Max_Leaves ->> Pass return 1 to Boss.
+		 2. If bal_Employee Leaves < Max_Leaves ->> Pass return 0 to Boss.
+	iii) Boss method Grants Leave if,
+		 1. If Manager_Method returns 1.
+		 2. Else --> Reject Leave.
+	iv) Create object to Employee and call each method. 
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Expected Result should be :
+			GRANTED
+			GRANTED
+			GRANTED
+			GRANTED
+			GRANTED
+			GRANTED
+			GRANTED
+			REJECTED
+
+Explaination : 
+	USE for Loop to Employee method that returns "1" for requesting leave.
+	USE array to store leaves and sizeOfArray as no.of Bal_Leaves.
+	If Array throws error out bounds sizeOfArray that denotes no Bal_Leaves and Manager method returns "0" to Boss.
+	USE Do-While in Boss for checking Manager values and 
+	Boss prints LEAVES "GRANTED" or "REJECTED".
+
+Note: If Total Leaves must not exceed 7( i.e Bal_Leaves <=7 )
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+CODE : 
+
+class Employee {
+    private int bal_EmployeeLeaves;
+
+    public Employee(int initialLeaves) {
+        this.bal_EmployeeLeaves = initialLeaves;
+    }
+
+    public int getRequestForLeave() {
+        if (bal_EmployeeLeaves > 0) {
+            bal_EmployeeLeaves--;
+            return 1; // Leave requested
+        } else {
+            return 0; // No leave balance
+        }
+    }
+
+    public int getBal_EmployeeLeaves() {
+        return bal_EmployeeLeaves;
+    }
+}
+
+class Manager {
+    public int checkLeaves(int bal_EmployeeLeaves, int max_Leaves) {
+        if (bal_EmployeeLeaves >= max_Leaves) {
+            return 1; // Sufficient leaves
+        } else {
+            return 0; // Insufficient leaves
+        }
+    }
+}
+
+class Boss {
+    public void processLeaveRequest(Employee emp, Manager mgr) {
+        int requestStatus = emp.getRequestForLeave();
+
+        if (requestStatus == 1) {
+            int max_Leaves = 7;
+            int managerResult = mgr.checkLeaves(emp.getBal_EmployeeLeaves(), max_Leaves);
+
+            if (managerResult == 1) {
+                System.out.println("GRANTED");
+            } else {
+                System.out.println("REJECTED");
+            }
+        } else {
+            System.out.println("REJECTED");
+        }
+    }
+}
+
+public class LeaveApplication {
+    public static void main(String[] args) {
+        Employee emp = new Employee(9); // Initial leave balance
+        Manager mgr = new Manager();
+        Boss boss = new Boss();
+
+        int totalRequests = 8; // Number of leave requests
+
+        for (int i = 0; i < totalRequests; i++) {
+            boss.processLeaveRequest(emp, mgr);
+        }
+    }
+}
+
+			
