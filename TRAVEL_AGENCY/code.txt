@@ -1,0 +1,127 @@
+1.) Create a class TravelAgencies with below attributes:
+
+regNo-int
+
+agencyName-String
+
+pakageType-String price-int
+
+flightFacility-boolean
+
+Write getters, setters for the above attributes. Create constructor which takes parameter in the above sequence.
+
+Create class Solution with main method. Implement two static methods - findAgencyWith HighestPackagePrice and
+
+agencyDetailsforGivenidAndType in Solution class.
+
+findAgencyWithHighestPackagePrice method:
+
+This method will take array of TravelAgencies objects as an input parameter and return the highest package price
+
+from the given array of objects.
+
+agencyDetailsForGivenldAndType method:
+
+This method will take three input parameters -array of TravelAgencies objects, int parameter regNo and String parameter packageType. 
+
+The method will return the TravelAgencies object based on below conditions : 
+
+* FlightFacility should be available.
+
+* The input parameters(regNo and packageType) should matched with the regNo and packageType of TravelAgencies object.
+
+If any of the above conditions are not met, then the method should return null. 
+
+Note: Same Travel agency can have more than one package type. Travel agency and package type combination is unique. All the searches should be case insensitive.
+
+The above mentioned static methods should be called from the main method.
+
+For findAgencyWithHighestPackagePrice method - The main method should print the highestPackagePrice as it is. 
+
+For agencyDetailsForGivenldAndType method -The main method should print the AgencyName and price of the returned object. 
+
+The AgencyName and price should be concatinated with: while printing
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+CODE :
+
+class TravelAgencies {
+    private int regNo;
+    private String agencyName;
+    private String packageType;
+    private int price;
+    private boolean flightFacility;
+    
+    // Constructor
+    public TravelAgencies(int regNo, String agencyName, String packageType, int price, boolean flightFacility) {
+        this.regNo = regNo;
+        this.agencyName = agencyName;
+        this.packageType = packageType;
+        this.price = price;
+        this.flightFacility = flightFacility;
+    }
+    
+    // Getters and setters
+    public int getRegNo() {
+        return regNo;
+    }
+    
+    public String getAgencyName() {
+        return agencyName;
+    }
+    
+    public String getPackageType() {
+        return packageType;
+    }
+    
+    public int getPrice() {
+        return price;
+    }
+    
+    public boolean hasFlightFacility() {
+        return flightFacility;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        // Create an array of TravelAgencies objects
+        TravelAgencies[] agencies = {
+            new TravelAgencies(1, "Agency A", "Type A", 1000, true),
+            new TravelAgencies(2, "Agency B", "Type B", 1500, false),
+            new TravelAgencies(3, "Agency C", "Type A", 1200, true)
+        };
+        
+        // Call the static methods
+        int highestPackagePrice = findAgencyWithHighestPackagePrice(agencies);
+        System.out.println("Highest Package Price: " + highestPackagePrice);
+        
+        TravelAgencies agencyDetails = agencyDetailsForGivenIdAndType(agencies, 3, "Type A");
+        if (agencyDetails != null) {
+            System.out.println("Agency Name: " + agencyDetails.getAgencyName() + " Price: " + agencyDetails.getPrice());
+        } else {
+            System.out.println("No matching agency found.");
+        }
+    }
+    
+    public static int findAgencyWithHighestPackagePrice(TravelAgencies[] agencies) {
+        int highestPrice = 0;
+        for (TravelAgencies agency : agencies) {
+            if (agency.getPrice() > highestPrice) {
+                highestPrice = agency.getPrice();
+            }
+        }
+        return highestPrice;
+    }
+    
+    public static TravelAgencies agencyDetailsForGivenIdAndType(TravelAgencies[] agencies, int regNo, String packageType) {
+         for (TravelAgencies agency : agencies) {
+            if (agency.getRegNo() == regNo && agency.getPackageType().equalsIgnoreCase(packageType) && agency.hasFlightFacility()) {
+                return agency;
+            }
+        }
+        return null;
+    }
+}
+ 
