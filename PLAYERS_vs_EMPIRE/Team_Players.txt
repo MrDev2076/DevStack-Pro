@@ -1,0 +1,136 @@
+
+	Team_Players
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Sample_Senario of accessModifiers in Oops:
+
+	 Team_1 and Team_2 and a  empire/judge that contains  Team_1 and Team_2   scores/no.of runs of four players for each team_1 and team_2.
+ and now acessed the scores and runs of players of both team_1 and team_2  by empire and display each team scores . 
+consider each 4 players for each class.
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Write a java program as below constraints :
+	i) Create Three clasess - Team_1 class
+	 		     - Team_2 class
+	 		     - Empire class
+
+ 	ii) Create four objects in each Team_1 and Team_2classes as players seperatly
+	iii) Now create display methods for each Team to get the no.of runs/scores of players of each class.
+	iv) Create arrayPlayers as object in empire class main method and  enter scores of players of both teams
+	v)  Create display methods to each team class array to print the scores of each player form the each of the teams Team_1 and Team_2.
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Expected Result should be :
+	 Team 1 Scores:
+		Player 1: 50 runs
+		Player 2: 30 runs
+		Player 3: 70 runs
+		Player 4: 45 runs
+
+	 Team 2 Scores:
+		Player 1: 60 runs
+		Player 2: 40 runs
+		Player 3: 55 runs
+		Player 4: 65 runs
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Code for Team_1 and Team_2  with player classes :
+______________________________________________________
+
+//player class
+public class Player {
+	// private instance variable runs
+	    private int runs;
+//players method
+	    public Player(int runs) {
+	        this.runs = runs;
+	    }
+//getRuns method that return each player's score
+	    public int getRuns()      {
+	        return runs;
+	    }
+	}
+
+//Team1 class
+	class Team_1 {
+		//instance player array to declare number of players in Team1
+	    private Player[] players;
+
+	    //runs array input assigned to specific player in team1
+	    public Team_1(int[] runs) {
+	        players = new Player[4];
+	        for (int i = 0; i < 4; i++) {
+	            players[i] = new Player(runs[i]);
+	        }
+	    }
+//getRuns method that return each player's score
+	    public Player[] getPlayers() {
+	        return players;
+	    }
+	}
+
+//Team2 class
+	class Team_2 {
+		//instance player array to declare number of players in Team2
+	    private Player[] players;
+
+	  //runs array input assigned to specific player in team2
+	    public Team_2(int[] runs) {
+	        players = new Player[4];
+	        for (int i = 0; i < 4; i++) {
+	            players[i] = new Player(runs[i]);
+	        }
+	    }
+	  //getting players method
+	    public Player[] getPlayers() {
+	        return players;
+	    }
+	}
+
+
+Code for Empire class and printing player's Team scores :
+___|__________________________________________________________
+
+//Empire class
+public class Empire {
+//Main Method
+	 public static void main(String[] args) {  
+
+//initializing team1&2 Scores in array
+	        int[] team1Runs = {50, 30, 70, 45};
+	        int[] team2Runs = {60, 40, 55, 65};
+
+//creating objects to team_1 and team_2 classes and passing team1 and team2 RunsArray
+	        Team_1 team1 = new Team_1(team1Runs);
+	        Team_2 team2 = new Team_2(team2Runs);
+
+ //displaying team1 and team2 team_player scores
+	        System.out.println("\n Team 1 Scores:");
+	        displayTeamScores(team1);
+
+	        System.out.println("\n Team 2 Scores:");
+	        displayTeamScores(team2);
+	    }
+
+ //creating display_TeamScores methods to team1 and team2
+	    public static void displayTeamScores(Team_1 team) {
+	    	
+//players class object to get players method
+	        Player[] players = team.getPlayers();
+	        for (int i = 0; i < 4; i++) 
+	       {
+	            System.out.println("Player " + (i + 1) + ": " + players[i].getRuns() + " runs");
+	        }
+	    }
+
+	    public static void displayTeamScores(Team_2 team) {
+	        Player[] players = team.getPlayers();
+	        for (int i = 0; i < 4; i++)
+	       {
+	            System.out.println("Player " + (i + 1) + ": " + players[i].getRuns() + " runs");
+	        }
+	    }
+	
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+}
+
+
